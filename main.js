@@ -1,11 +1,17 @@
-const container = document.getElementsByClassName('container_question');
+const cont = document.getElementsByClassName('cont');
 
-function x() {
-    for (let item of container) {
-        item.addEventListener("click", function() {
-            console.log(item);
+function accordion() {
+    for (let item of cont) {
+        let first = item.firstElementChild;
+        first.addEventListener('click', function() {
+            let second = this.nextElementSibling;
+            if (second.style.maxHeight) {
+                second.style.maxHeight = null;
+            } else {
+                second.style.maxHeight = second.scrollHeight;
+            }
         });
     }
-
 }
-console.log(x());
+
+accordion();

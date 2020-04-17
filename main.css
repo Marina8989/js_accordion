@@ -26,6 +26,7 @@ h1 {
 }
 
 .container_answer {
+    max-height: 600px;
     height: 0;
     overflow: hidden;
 }
